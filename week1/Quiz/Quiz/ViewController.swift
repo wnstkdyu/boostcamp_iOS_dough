@@ -9,9 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    // MARK: Properties
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var answerLabel: UILabel!
     
+    // MARK: Constances
     let questions: [String] = ["From what is cognac made?",
                                "What is 7+7?",
                                "What is the capital of Vermont?"]
@@ -20,6 +23,7 @@ class ViewController: UIViewController {
                              "Montpelier"]
     var currentQuestionIndex: Int = 0
     
+    // MARK: Actions
     @IBAction func showNextQuestion(sender: AnyObject) {
         currentQuestionIndex += 1
         // 마지막 문제 끝나면 첫 번째로 돌아오기
